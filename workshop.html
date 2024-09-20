@@ -26,18 +26,9 @@
       return x * x;
     }
 
-    function testSquare() {
-      const result = square(2);
-      const expected = 4;
-
-      if (result !== expected) {
-        console.error(`Test failed: Expected ${expected}, but got ${result}`);
-      } else {
-        console.log(`Test passed: ${result} is correct.`);
-      }
-    }
-
-    testSquare();
+    // Tests
+    const result1 = square(2);
+    equal(result1, 4); // Testing square(2)
   </script>
 </body>
 
