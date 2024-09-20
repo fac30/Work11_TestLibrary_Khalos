@@ -11,6 +11,16 @@
   <h1>Open the console</h1>
 
   <script>
+
+    // Reusable equality checker
+    function equal(actual, expected) {
+      if (actual === expected) {
+        console.info(`Test passed: ${actual} is equal to ${expected}`);
+      } else {
+        console.error(`Test failed: Expected ${expected}, but got ${actual}`);
+      }
+    }
+
     // the function we're testing
     function square(x) {
       return x * x;
