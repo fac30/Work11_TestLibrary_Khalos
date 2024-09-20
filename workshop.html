@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Testing</title>
+</head>
+
+<body>
+  <h1>Open the console</h1>
+
+  <script>
+    // the function we're testing
+    function square(x) {
+      return x * x;
+    }
+
+    function testSquare() {
+      const result = square(2);
+      const expected = 4;
+
+      if (result !== expected) {
+        console.error(`Test failed: Expected ${expected}, but got ${result}`);
+      } else {
+        console.log(`Test passed: ${result} is correct.`);
+      }
+    }
+
+    testSquare();
+  </script>
+</body>
+
+</html>
