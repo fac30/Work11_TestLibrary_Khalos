@@ -12,6 +12,16 @@
 
   <script>
 
+    function test(name, testFunction) {
+      console.group(name);     // Start a group with the test name
+      try {
+        testFunction();        // Run the test function
+      } catch (error) {
+        console.error("Test threw an error:", error);
+      }
+      console.groupEnd();      // End the group
+    }
+
     // Reusable equality checker
     function equal(actual, expected) {
       if (actual === expected) {
