@@ -21,14 +21,27 @@
       }
     }
 
+    // Reusable inequality checker
+    function notEqual(actual, expected) {
+      if (actual !== expected) {
+        console.info(`Test passed: ${actual} is not equal to ${expected}`);
+      } else {
+        console.error(`Test failed: Did not expect ${actual} to be equal to ${expected}`);
+      }
+    }
+
     // the function we're testing
     function square(x) {
       return x * x;
     }
 
-    // Tests
+    // Testing square() 
     const result1 = square(2);
     equal(result1, 4); // Testing square(2)
+
+    // Test that square(3) does not return 10
+    const result = square(3);
+    notEqual(result, 10);
   </script>
 </body>
 
