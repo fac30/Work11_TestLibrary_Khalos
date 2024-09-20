@@ -50,18 +50,18 @@
     test("Correctly squares integers", () => {
       const result = square(2);
       const expected = 4;
-      equal(result, expected);
+      equal(result, expected, "square(2) should return 4");
     });
 
     test("Correctly squares decimal numbers", () => {
       const result = square(3.5);
       const expected = 12.25;
-      equal(result, expected);
+      equal(result, expected, "square(3.5) should return 12.25");
     });
 
     test("Square(3) does not return 10", () => {
       const result = square(3);
-      notEqual(result, 10);
+      notEqual(result, 10, "square(3) should not return 10, it should return 9");
     });
   </script>
 </body>
