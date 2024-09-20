@@ -45,13 +45,23 @@
       return x * x;
     }
 
-    // Testing square() 
-    const result1 = square(2);
-    equal(result1, 4); // Testing square(2)
+    // Define tests using the `test` function
+    test("Correctly squares integers", () => {
+      const result = square(2);
+      const expected = 4;
+      equal(result, expected);
+    });
 
-    // Test that square(3) does not return 10
-    const result = square(3);
-    notEqual(result, 10);
+    test("Correctly squares decimal numbers", () => {
+      const result = square(3.5);
+      const expected = 12.25;
+      equal(result, expected);
+    });
+
+    test("Square(3) does not return 10", () => {
+      const result = square(3);
+      notEqual(result, 10);
+    });
   </script>
 </body>
 
