@@ -12,6 +12,7 @@
 
   <script>
 
+    // Reusable test function
     function test(name, testFunction) {
       console.group(name);     // Start a group with the test name
       try {
@@ -22,21 +23,21 @@
       console.groupEnd();      // End the group
     }
 
-    // Reusable equality checker
-    function equal(actual, expected) {
+    // Reusable equality checker with optional custom message
+    function equal(actual, expected, message = null) {
       if (actual === expected) {
-        console.info(`Test passed: ${actual} is equal to ${expected}`);
+        console.info(message || `Test passed: ${actual} is equal to ${expected}`);
       } else {
-        console.error(`Test failed: Expected ${expected}, but got ${actual}`);
+        console.error(message || `Test failed: Expected ${expected}, but got ${actual}`);
       }
     }
 
-    // Reusable inequality checker
-    function notEqual(actual, expected) {
+    // Reusable inequality checker with optional custom message
+    function notEqual(actual, expected, message = null) {
       if (actual !== expected) {
-        console.info(`Test passed: ${actual} is not equal to ${expected}`);
+        console.info(message || `Test passed: ${actual} is not equal to ${expected}`);
       } else {
-        console.error(`Test failed: Did not expect ${actual} to be equal to ${expected}`);
+        console.error(message || `Test failed: Did not expect ${actual} to be equal to ${expected}`);
       }
     }
 
